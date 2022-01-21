@@ -1,0 +1,28 @@
+extends layout/index.pug 
+//- comentario mandamos a llamar el block extends yla dirrecion cuidado con las tabulaciones se pone tabulacion o espacios pero no los dos al mismo tiempo
+block contenido 
+	main.container.mt-5 
+		div.row
+			div.col-md-5
+				img(src="img/nosotros.jpg",alt="Imagen sobre nosotros",class="img-fluid")
+			div.col-md-7
+				h1 #{pagina}
+				blockquote  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit  cillum dolore eu fugiat nulla pariatur. sunt in culpa qui officia deserunt mollit anim id est laborum.
+				p  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore  quis  commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				p  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor  Ut enim ad minim veniam, quis  n Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+	div.listado-iconos
+		div.container.mt-5.py-5.text-center
+			div.row
+				div.col-md-4
+					img(src="img/icono_seguridad.svg",alt="icono seguridad",class="img-fluid mb-4")
+					h2.mb-4 Seguridad 
+					p  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+				div.col-md-4
+					img(src="img/icono_destinos.svg",alt="icono seguridad",class="img-fluid mb-4")
+					h2.mb-4 Mejores Destinos 
+					p  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+				div.col-md-4
+					img(src="img/icono_precios.svg",alt="icono seguridad",class="img-fluid mb-4")
+					h2.mb-4 Los Mejores Precios
+					p  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+
