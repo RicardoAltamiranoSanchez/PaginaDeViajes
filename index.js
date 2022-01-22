@@ -28,7 +28,8 @@ db.authenticate()
 //para habilitar un template engine instalamos npm install pug
 //habilitamos pug
 app.set('view engine','pug');
-
+//Habilitando el body buscamos
+app.use(express.urlencoded({extended:true}))
 //enviamos variables locales ala vista 
 app.use((req,res,next)=>{
 const year= new Date();

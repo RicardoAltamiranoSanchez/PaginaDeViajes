@@ -65,7 +65,22 @@ console.log(`Hubo un error ${error}`)
 }
 
 }
+const GuardandoTestimoniales=async (req,res)=>{
+const {nombre,correo,mensaje}=req.body;
+console.log(req.body);
+const errores=[];
+// trim es par cortar un palabra que quite los epacion en blanco de incio y al afinal
+if(nombre.trim()===""){
+errores.push({mensaje:"El campo esta vacio "});
+}
+if(correo.trim()===""){
+errores.push({mensaje:"El campo esta vacio"})
 
+}if(mensaje.trim()===""){
+errores.push({mensaje:"El campo esta vacio "});
+}
+console.log(errores);
+}
 
 
 export{
@@ -74,5 +89,6 @@ PaginaViajes,
 PaginaNosotros,
 PaginaTestimoniales,
 PaginaInformacion,
+GuardandoTestimoniales,
 
 }
