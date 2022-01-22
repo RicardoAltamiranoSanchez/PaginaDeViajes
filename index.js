@@ -52,3 +52,5 @@ console.log(`Servidor encendio en el puerto ${port}`);
 //npm install mysql2
 //npm install sequelize este seria un orm
 
+//pagina para cambiar codigo de html a pug https://html-to-pug.com/
+//pagina de iconos svg https://tablericons.com/
