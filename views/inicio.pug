@@ -1,8 +1,23 @@
 extends layout/index.pug 
 //- comentario mandamos a llamar el block extends yla dirrecion cuidado con las tabulaciones se pone tabulacion o espacios pero no los dos al mismo tiempo
+block slider
+	div.slider
+		h1 Rio de Jainero
+		en Aventura
+	
+
+
+
+
 block contenido 
-	h1 #{pagina}
-	img(src="img/cupon.jpg")
+	main.container.mt-5
+		h2.text-center.mb-5 Sobre Nosotros
+		div.row-mb-5 
+			div.col-md-6 
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+			div.col-md-6
+				img(src="/img/inicio_nosotros.jpg", alt="Imagen Nosotros" class="img-fluid")
 
 
 
