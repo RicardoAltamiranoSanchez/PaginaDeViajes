@@ -1,14 +1,35 @@
 import { Viajes } from "../models/Viaje.js";
 import { Testimonio } from "../models/Testimoniales.js";
 
-const PaginaInicio = (req, res) => {
+const PaginaInicio = async (req, res) => {
+//hacemos un arreglo para poder meter las peticiones en la base de datos
+//ya que en cada await se bloquea el codigo hasta que termien la peticion
+  const promesaDb=[];
+  promesaDb.push(Viajes.findAll({limit:3}));
+  promesaDb.push(Testimonio.findAll({limit:3}));
+  try {
+//solo nos trae los tres primeros
+    // const viajes = await Viajes.findAll({limit:3});
+    // const testimoniales=await Testimonio.findAll({limit:3})
+//con Promise.all()Ejecutamos todas las peticiones ala base de datos
+   const resultado = await Promise.all(promesaDb);
   //req lo que enviamos y res lo que nos responde
   //res.json es para enviar un json
   //res.send es para enviar un mensaje en concreto
   //res.render es para enviar una pagina
   res.render("inicio",{
    clase:"home",
+   viajes:resultado[0],
+   testimoniales:resultado[1]
 });
+
+    
+  } catch (error) {
+    
+  }
+
+
+
 };
 
 const PaginaViajes = async (req, res) => {

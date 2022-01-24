@@ -12,12 +12,25 @@ block slider
 block contenido 
 	main.container.mt-5
 		h2.text-center.mb-5 Sobre Nosotros
-		div.row-mb-5 
+		div.row.mb-5 
 			div.col-md-6 
 				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
 				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
 			div.col-md-6
-				img(src="/img/inicio_nosotros.jpg", alt="Imagen Nosotros" class="img-fluid")
+				img(src="/img/inicio_nosotros.jpg", alt="Imagen Nosotros",class="img-fluid")
+		include layout/viajesblock.pug
+	div.descuento 
+		div.container 
+			div.row 	
+				div.col-md-6 
+					div.contenido 	
+						h3 10% de Descuento 
+						p.titulo Viaje a Canada 
+						p.fecha 20 de Mayo de 2022 - 28 de Mayo de 2022
+						p.precio 2,500 USD 
+	div.container 
+		h2.mt-5.text-center Testimoniales
+		include layout/TestimonialesBlock.pug
 
 
 

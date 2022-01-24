@@ -16,7 +16,7 @@ const app=express();
 
 
 
-const port= process.env.PORT || 5000;
+
 
 
 
@@ -45,9 +45,14 @@ next();
 app.use(express.static('public'));
 //agregamos los router
 app.use('/',router);
-app.listen(port,()=>{
-console.log(`Servidor encendio en el puerto ${port}`);
-})
+//hacemos el entorno para producion y Desarrollador
+const host = process.env.HOST || '0.0.0.0';
+const port =process.env.PORT || 5000;
+
+
+app.listen(port,host,()=>{
+console.log(`Servidor Iniciado Correctamente`);
+});
 
 // instalamos dependiencias para la conexion de la base de datos en mysql
 //npm install mysql2
@@ -55,3 +60,4 @@ console.log(`Servidor encendio en el puerto ${port}`);
 
 //pagina para cambiar codigo de html a pug https://html-to-pug.com/
 //pagina de iconos svg https://tablericons.com/
+// npm install --save-dev dotenv instalar variable de entorno

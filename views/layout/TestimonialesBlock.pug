@@ -1,0 +1,11 @@
+div.row.testimoniales
+			each testimonio in testimoniales
+				div.col-md-6.col-lg-4.mb-4
+					div.card
+						div.card-body
+							blockquote.blockquote 
+							p.mb-8 
+								|  #{testimonio.mensaje}
+							footer.blockquote-footer
+								| #{testimonio.nombre}
+

@@ -4,7 +4,8 @@
   "description": "PaginaDeviajes",
   "main": "index.js",
   "scripts": {
-    "dev": "node index.js"
+    "dev": "nodemon index.js",
+    "start":"node index.js"
   },
   "type": "module",
   "author": "RicardoAltamiranoSanchez",
@@ -14,5 +15,8 @@
     "mysql2": "^2.3.3",
     "pug": "^3.0.2",
     "sequelize": "^6.13.0"
+  },
+  "devDependencies": {
+    "dotenv": "^14.2.0"
   }
 }
