@@ -5,18 +5,16 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon index.js",
-    "start":"node index.js"
+    "start": "node index.js"
   },
   "type": "module",
   "author": "RicardoAltamiranoSanchez",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^15.0.0",
     "express": "^4.17.2",
     "mysql2": "^2.3.3",
     "pug": "^3.0.2",
     "sequelize": "^6.13.0"
-  },
-  "devDependencies": {
-    "dotenv": "^14.2.0"
   }
 }
